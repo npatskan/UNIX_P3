@@ -66,7 +66,8 @@ do
 			echo "--------------------------------"
 			echo " Who is Online"
 			echo "--------------------------------"
-			
+			echo -e 'NAME\tLINE\t\tTIME\t\tCOMMET'
+			echo "$(who)"	
 			echo "Press [Enter] key to continue..."
 			read cont_command
 			;;
@@ -74,7 +75,7 @@ do
 			echo "--------------------------------"
 			echo " List of last logged in users"
 			echo "--------------------------------"
-
+			last
 			echo "Press [Enter] key to continue..."
 			read cont_command
 			;;
@@ -82,15 +83,15 @@ do
 			echo "--------------------------------"
 			echo " Public IP information"
 			echo "--------------------------------"
-
-			echo "Press [Enter] key to continue..."
+			curl https://ipinfo.io/ip
+			echo -e "\nPress [Enter] key to continue..."
 			read cont_command
 			;;
 		7)
 			echo "--------------------------------"
 			echo " Disk Usage information"
 			echo "--------------------------------"
-
+			df -h | awk '{if(NR>1)print $5 "\t"  $6}'
 			echo "Press [Enter] key to continue..."
 			read cont_command
 			;;
@@ -98,7 +99,7 @@ do
 			echo "--------------------------------"
 			echo " HTML Tree File Generated"
 			echo "--------------------------------"
-			
+			./SiteMap.sh ~ ./filetree.html	
 			echo "Press [Enter] key to continue..."
 			read cont_command
 			;;
