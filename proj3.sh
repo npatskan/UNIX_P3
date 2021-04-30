@@ -104,12 +104,7 @@ do
 			read cont_command
 			;;
 		9)
-			echo "--------------------------------"
-			echo " Not implemented"
-			echo "--------------------------------"
-			
-			echo "Press [Enter] key to continue..."
-			read cont_command
+			./subMenu.sh
 			;;
 		10)
 			echo "exiting"

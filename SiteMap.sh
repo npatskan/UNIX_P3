@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # Project 1 for ECE 3524
+# V.2 modified for Project 3
 # By: Nathan Patskan
 
 # recursive function for traversing file system and printing results to html file
